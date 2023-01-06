@@ -29,7 +29,6 @@ const Home: React.FC<{ pageData: any }> = ({ pageData }) => {
     pagePath: pageData.url,
     ogType: "Website",
   };
-
   return (
     <div>
       <Seo {...seo} />

@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lora";
-}
-p,
-label {
-  font-family: "Raleway";
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lora";
+  }
+  p,
+  label {
+    font-family: "Raleway";
+  }
 }

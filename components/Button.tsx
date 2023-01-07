@@ -14,7 +14,7 @@ const Button: FC<ILink> = ({
       href={url}
       aria-label="button"
       target={external ? "_blank" : ""}
-      className="px-4 py-2 mr-8 rounded-md bg-customBlue-800 text-customBlue-50 border-customBlue-800 dark:border-customBlue-50 border-2 dark:bg-customBlue-50 dark:text-customBlue-800 hover:bg-customBlue-700 hover:dark:bg-customBlue-100"
+      className="px-4 py-2 mr-4 sm:mr-8 rounded-md bg-customBlue-800 text-customBlue-50 border-customBlue-800 dark:border-customBlue-50 border-2 dark:bg-customBlue-50 dark:text-customBlue-800 hover:bg-customBlue-700 hover:dark:bg-customBlue-100"
     >
       {textOnLink}
     </Link>
@@ -23,14 +23,14 @@ const Button: FC<ILink> = ({
       href={url}
       aria-label="button"
       target={external ? "_blank" : ""}
-      className="px-4 py-2 mr-8 rounded-md bg-customBlue-50 text-customBlue-800 border-customBlue-800 border-2 dark:bg-customBlue-900 dark:text-customBlue-50 dark:border-customBlue-100 hover:bg-customBlue-100 hover:dark:bg-customBlue-800"
+      className="px-4 py-2 mr-4 sm:mr-8 rounded-md bg-customBlue-50 text-customBlue-800 border-customBlue-800 border-2 dark:bg-customBlue-900 dark:text-customBlue-50 dark:border-customBlue-100 hover:bg-customBlue-100 hover:dark:bg-customBlue-800"
     >
       {textOnLink}
     </Link>
   ) : style === "email" ? (
     <Link
       href={`mailto:${url}?&subject=${description}`}
-      className="px-4 py-2 mr-8 rounded-md bg-customBlue-800 text-customBlue-50 border-customBlue-800 dark:border-customBlue-50 border-2 dark:bg-customBlue-50 dark:text-customBlue-800 hover:bg-customBlue-700 hover:dark:bg-customBlue-100"
+      className="px-4 py-2 mr-4 sm:mr-8 rounded-md bg-customBlue-800 text-customBlue-50 border-customBlue-800 dark:border-customBlue-50 border-2 dark:bg-customBlue-50 dark:text-customBlue-800 hover:bg-customBlue-700 hover:dark:bg-customBlue-100"
     >
       {textOnLink}
     </Link>

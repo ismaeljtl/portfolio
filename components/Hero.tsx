@@ -33,11 +33,11 @@ const Hero: FC<IBlock> = ({
   }, []);
 
   return (
-    <section className="container mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="container mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
       <div className="flex justify-between">
         <div>
           <Divider />
-          <div className="my-16">
+          <div className="my-12 sm:my-16">
             <h1 className="font-bold text-5xl sm:text-7xl md:text-8xl text-customBlue-800 dark:text-customBlue-100">
               {heading}
             </h1>

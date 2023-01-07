@@ -12,7 +12,8 @@ module.exports = {
         "dark-quote": "url('/img/quote-dark.svg')",
       },
       fontFamily: {
-        sans: ["var(--font-lora)"],
+        sans: ["var(--font-raleway)"],
+        serif: ["var(--font-lora)"],
       },
       colors: {
         customBlue: {

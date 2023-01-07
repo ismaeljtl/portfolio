@@ -11,7 +11,7 @@ const Project: FC<IItem> = ({
   description,
 }) => {
   return (
-    <div className="container mx-auto max-w-screen-lg px-4 py-16 sm:px-6 lg:px-8">
+    <div className="container mx-auto max-w-screen-lg px-4 py-8 sm:py-16 sm:px-6 lg:px-8">
       <Link href={url} target="_blank">
         <ThemedImage lightImage={image} darkImage={backgroundImage} />
       </Link>

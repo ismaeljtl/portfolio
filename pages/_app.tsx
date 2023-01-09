@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import { ApolloProvider } from "@apollo/client";
 import contentful from "../services/contentful";
 import { Lora, Raleway } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
+import { useRouter } from "next/router";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -15,6 +17,22 @@ const raleway = Raleway({
 });
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  const handleRouteChange = (url: any) => {
+    // @ts-ignore
+    window.gtag("config", "G-XNJVS1PRZ2", {
+      page_path: url,
+    });
+  };
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ThemeProvider>
       <ApolloProvider client={contentful}>

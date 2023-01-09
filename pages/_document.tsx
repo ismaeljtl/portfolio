@@ -14,6 +14,19 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-XNJVS1PRZ2"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-XNJVS1PRZ2');`,
+            }}
+          ></script>
         </Head>
         <body>
           <Main />

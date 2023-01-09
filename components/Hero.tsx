@@ -3,12 +3,9 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Button from "./Button";
 import Divider from "./Divider";
-import Github from "./SocialMedia/Github";
-import Linkedin from "./SocialMedia/Linkedin";
-import Instagram from "./SocialMedia/Instagram";
-import Twitter from "./SocialMedia/Twitter";
 import IBlock from "../interfaces/block.interface";
 import IItem from "../interfaces/item.interface";
+import SocialIcon from "./SocialIcon";
 
 const Hero: FC<IBlock> = ({
   heading,
@@ -50,10 +47,11 @@ const Hero: FC<IBlock> = ({
           {itemsCollection &&
             itemsCollection.items.map((item: IItem) => (
               <Fragment key={item.sys.id}>
-                {item.heading === "github" && <Github {...item} />}
-                {item.heading === "linkedin" && <Linkedin {...item} />}
-                {item.heading === "instagram" && <Instagram {...item} />}
-                {item.heading === "twitter" && <Twitter {...item} />}
+                <SocialIcon
+                  url={item.url}
+                  external={item.external}
+                  brand={item.heading}
+                />
               </Fragment>
             ))}
         </div>
